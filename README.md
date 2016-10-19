@@ -4,6 +4,8 @@ Image bundles can be found in [`bundles`](https://github.com/qiime2/logos/tree/m
 
 Source SVGs can be found in [`vector`](https://github.com/qiime2/logos/tree/master/vector).
 
+The original QIIME logo was designed by Meg Pirrung.
+
 ## To Build
 
 ### Prerequisites
