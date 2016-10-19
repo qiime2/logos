@@ -1,6 +1,8 @@
 # QIIME 2 Logos
 
-Source SVGs can be found in `svg`.
+Image bundles can be found in [`bundles`](https://github.com/qiime2/logos/tree/master/bundles).
+
+Source SVGs can be found in [`vector`](https://github.com/qiime2/logos/tree/master/vector).
 
 ## To Build
 
