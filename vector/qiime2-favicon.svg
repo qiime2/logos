@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  <defs>
+    <clipPath id="cut-two">
+      <rect x="365" y="-50" width="40" height="80" transform="rotate(45)" />
+      <rect x="365" y="-50" width="80" height="40" transform="rotate(45)" />
+    </clipPath>
+  </defs>
+  <g>
+    <!-- Q (magnifying glass) -->
+    <g transform="translate(0,-160)">
+      <circle cx="100" cy="255" r="67.5" stroke="#000000" stroke-width="35" fill="none" />
+      <line x1="155" y1="310" x2="233" y2="390" stroke-width="30" stroke="#000000"/>
+    </g>
+    <!-- 2 -->
+    <g transform="translate(-107,-118),scale(0.7)">
+      <circle cx="295" cy="280" r="24" stroke="#000000" stroke-width="12" fill="none" clip-path="url(#cut-two)" />
+      <line x1="312" y1="297" x2="270" y2="339" stroke="#000000" stroke-width="12" />
+      <line x1="266" y1="340" x2="325" y2="340" stroke="#000000" stroke-width="12" />
+    </g>
+  </g>
+</svg>
