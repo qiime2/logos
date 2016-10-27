@@ -14,7 +14,7 @@
       <rect x="365" y="-50" width="80" height="40" transform="rotate(45)" />
     </clipPath>
   </defs>
-  <g>
+  <g transform="translate(2,-2)">
     <!-- tree -->
     <rect x="156.5" y="3" width="34" height="79" fill="#7F7F7F" />
     <rect x="83" y="48" width="181" height="34" fill="#7F7F7F" />

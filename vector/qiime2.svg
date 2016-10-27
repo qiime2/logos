@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="170">
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="154">
   <defs>
     <clipPath id="cut-bottom">
       <rect x="217" y="177" width="108" height="30" />
@@ -14,7 +14,7 @@
       <rect x="365" y="-50" width="80" height="40" transform="rotate(45)" />
     </clipPath>
   </defs>
-  <g transform="translate(-100,-100)">
+  <g transform="translate(-118,-105)">
     <!-- tree -->
     <rect x="169" y="106" width="12" height="20" fill="#7F7F7F" />
     <rect x="144" y="126" width="62" height="12" fill="#7F7F7F" />

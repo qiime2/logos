@@ -8,13 +8,28 @@
     </clipPath>
   </defs>
   <g>
+    <rect x="0" y="0" width="300" height="300" fill="#FFFFFF" />
+
+    <!-- tree -->
+    <rect x="156.5" y="3" width="34" height="59" fill="#7F7F7F" />
+    <rect x="83" y="28" width="181" height="34" fill="#7F7F7F" />
+    <rect x="83" y="28" width="34" height="50" fill="#7F7F7F" />
+    <rect x="230" y="28" width="34" height="90" fill="#7F7F7F" />
+    <rect x="209" y="84" width="76" height="34" fill="#7F7F7F" />
+
+    <rect x="68" y="130" width="64" height="41" fill="#FF0000" />
+    <rect x="83" y="78" width="34" height="34" fill="#FF0000" />
+
+    <rect x="209" y="118" width="34" height="34" fill="#00FF00" />
+
+    <rect x="251" y="118" width="34" height="34" fill="#0000FF" />
+
     <!-- Q (magnifying glass) -->
-    <g transform="translate(0,-160)">
-      <circle cx="100" cy="255" r="67.5" stroke="#000000" stroke-width="35" fill="none" />
-      <line x1="155" y1="310" x2="233" y2="390" stroke-width="30" stroke="#000000"/>
-    </g>
+    <circle cx="100" cy="180" r="67.5" stroke="#000000" stroke-width="35" fill="none" />
+    <line x1="155" y1="235" x2="200" y2="285" stroke-width="30" stroke="#000000"/>
+
     <!-- 2 -->
-    <g transform="translate(-107,-118),scale(0.7)">
+    <g transform="translate(-50,-90)">
       <circle cx="295" cy="280" r="24" stroke="#000000" stroke-width="12" fill="none" clip-path="url(#cut-two)" />
       <line x1="312" y1="297" x2="270" y2="339" stroke="#000000" stroke-width="12" />
       <line x1="266" y1="340" x2="325" y2="340" stroke="#000000" stroke-width="12" />
