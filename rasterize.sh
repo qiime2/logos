@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ZIP=qiime2_logos_v6
+ZIP=qiime2_logos_v7
 
 rm -rf raster && mkdir -p raster/{transparent,white,icons}
 mkdir raster/icons/{apple_iconset.iconset,ico}
@@ -34,11 +34,13 @@ cp raster/icons/apple_iconset.iconset/icon_512x512.png raster/icons/apple_iconse
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-400.png
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-200.png 200:
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-100.png 100:
+svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-40.png 40:
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-600.png 600:
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-800.png 800:
 svgexport vector/qiime2-square.svg raster/transparent/qiime2-square-1000.png 1000:
 
 # SQUARE, TRANSPARENT, TIFF
+convert raster/transparent/qiime2-square-40.png raster/transparent/qiime2-square-40.tiff
 convert raster/transparent/qiime2-square-100.png raster/transparent/qiime2-square-100.tiff
 convert raster/transparent/qiime2-square-200.png raster/transparent/qiime2-square-200.tiff
 convert raster/transparent/qiime2-square-400.png raster/transparent/qiime2-square-400.tiff
