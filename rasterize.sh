@@ -69,7 +69,7 @@ convert raster/transparent/qiime2-rect-2000.png raster/transparent/qiime2-rect-2
 convert raster/transparent/qiime2-rect-4000.png raster/transparent/qiime2-rect-4000.tiff
 
 # Q2VIEW
-svgexport vector/q2view.svg raster/transparent/q2view.png
+svgexport vector/q2view.svg raster/transparent/q2view.png 300:
 
 # {SQUARE,RECT}, WHITE, {PNG,TIFF}
 for filepath in raster/transparent/*.{png,tiff}; do
