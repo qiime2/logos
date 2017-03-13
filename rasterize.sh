@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-ZIP=qiime2_logos_v8
+ZIP=qiime2_logos_v9
 
-rm -rf raster && mkdir -p raster/{transparent,white,icons}
+rm -rf raster && mkdir -p raster/{transparent,white,black,icons}
 mkdir raster/icons/{apple_iconset.iconset,ico}
 
 # FAVICON
@@ -68,13 +68,38 @@ convert raster/transparent/qiime2-rect-1000.png raster/transparent/qiime2-rect-1
 convert raster/transparent/qiime2-rect-2000.png raster/transparent/qiime2-rect-2000.tiff
 convert raster/transparent/qiime2-rect-4000.png raster/transparent/qiime2-rect-4000.tiff
 
+# RECT, TRANSPARENT, INV, PNG
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-400.png
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-200.png 200:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-100.png 100:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-600.png 600:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-800.png 800:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-1000.png 1000:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-2000.png 2000:
+svgexport vector/qiime2-inv.svg raster/transparent/qiime2-rect-inv-4000.png 4000:
+
+# RECT, TRANSPARENT, INV, TIFF
+convert raster/transparent/qiime2-rect-inv-100.png raster/transparent/qiime2-rect-inv-100.tiff
+convert raster/transparent/qiime2-rect-inv-200.png raster/transparent/qiime2-rect-inv-200.tiff
+convert raster/transparent/qiime2-rect-inv-400.png raster/transparent/qiime2-rect-inv-400.tiff
+convert raster/transparent/qiime2-rect-inv-600.png raster/transparent/qiime2-rect-inv-600.tiff
+convert raster/transparent/qiime2-rect-inv-800.png raster/transparent/qiime2-rect-inv-800.tiff
+convert raster/transparent/qiime2-rect-inv-1000.png raster/transparent/qiime2-rect-inv-1000.tiff
+convert raster/transparent/qiime2-rect-inv-2000.png raster/transparent/qiime2-rect-inv-2000.tiff
+convert raster/transparent/qiime2-rect-inv-4000.png raster/transparent/qiime2-rect-inv-4000.tiff
+
 # Q2VIEW
 svgexport vector/q2view.svg raster/transparent/q2view.png 300:
 
 # {SQUARE,RECT}, WHITE, {PNG,TIFF}
-for filepath in raster/transparent/*.{png,tiff}; do
+for filepath in raster/transparent/^*inv*.{png,tiff}; do
     filename=${filepath##*/}
     convert raster/transparent/$filename -background white -alpha remove raster/white/$filename
+done
+
+for filepath in raster/transparent/*inv*.{png,tiff}; do
+    filename=${filepath##*/}
+    convert raster/transparent/$filename -background black -alpha remove raster/black/$filename
 done
 
 rm -rf $ZIP && mkdir $ZIP
