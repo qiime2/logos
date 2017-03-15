@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-ZIP=qiime2_logos_v9
+ZIP=qiime2_logos_v10
 
 rm -rf raster && mkdir -p raster/{transparent,white,black,icons}
 mkdir raster/icons/{apple_iconset.iconset,ico}
@@ -88,18 +88,21 @@ convert raster/transparent/qiime2-rect-inv-1000.png raster/transparent/qiime2-re
 convert raster/transparent/qiime2-rect-inv-2000.png raster/transparent/qiime2-rect-inv-2000.tiff
 convert raster/transparent/qiime2-rect-inv-4000.png raster/transparent/qiime2-rect-inv-4000.tiff
 
-# Q2VIEW
+# Q2VIEW, FORUM, DOCS
 svgexport vector/q2view.svg raster/transparent/q2view.png 300:
+svgexport vector/q2forum.svg raster/transparent/q2forum.png 300:
+svgexport vector/q2docs.svg raster/transparent/q2docs.png 300:
 
 # {SQUARE,RECT}, WHITE, {PNG,TIFF}
-for filepath in raster/transparent/^*inv*.{png,tiff}; do
+for filepath in raster/transparent/*.{png,tiff}; do
     filename=${filepath##*/}
-    convert raster/transparent/$filename -background white -alpha remove raster/white/$filename
-done
 
-for filepath in raster/transparent/*inv*.{png,tiff}; do
-    filename=${filepath##*/}
-    convert raster/transparent/$filename -background black -alpha remove raster/black/$filename
+    if [[ $filename =~ '.*inv.*' ]]
+    then
+        convert raster/transparent/$filename -background black -alpha remove raster/black/$filename
+    else
+        convert raster/transparent/$filename -background white -alpha remove raster/white/$filename
+    fi
 done
 
 rm -rf $ZIP && mkdir $ZIP
