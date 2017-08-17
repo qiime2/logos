@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-ZIP=qiime2_logos_v10
+ZIP=qiime2_logos_v11
 
 rm -rf raster && mkdir -p raster/{transparent,white,black,icons}
 mkdir raster/icons/{apple_iconset.iconset,ico}
@@ -92,6 +92,7 @@ convert raster/transparent/qiime2-rect-inv-4000.png raster/transparent/qiime2-re
 svgexport vector/q2view.svg raster/transparent/q2view.png 300:
 svgexport vector/q2forum.svg raster/transparent/q2forum.png 300:
 svgexport vector/q2docs.svg raster/transparent/q2docs.png 300:
+svgexport vector/q2workshops.svg raster/transparent/q2workshops.png 300:
 
 # {SQUARE,RECT}, WHITE, {PNG,TIFF}
 for filepath in raster/transparent/*.{png,tiff}; do
